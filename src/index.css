@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #0F172A;
+  color: #F8FAFC;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #1E293B;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 2px;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradient text for highlights */
+.gradient-text {
+  background: linear-gradient(135deg, #F59E0B, #EF4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* K-line candlestick animation */
+@keyframes candlestick {
+  0%, 100% { height: 40px; }
+  50% { height: 60px; }
+}
+
+/* Stock ticker tape */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker 20s linear infinite;
+}
