@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +14,6 @@
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/kv": "^2.0.0",
-    "@vercel/og": "^0.11.1",
     "framer-motion": "^11.2.10",
     "html2canvas": "^1.4.1",
     "react": "^18.3.1",
